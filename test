@@ -1,0 +1,61 @@
+# coding:utf-8
+
+def add_function(a, b):
+    c = a + b
+    print c
+
+
+def print_function_a(a, b):
+    print "str[%s] is %s" % (a, b)
+
+
+def print_strings(a):
+    for i in range(0, len(a)):
+        print_function_a(i, a[i])
+
+
+def print_cutout_str(a, start, end):
+    for i in range(start, end):
+        print_function_a(i, a[i])
+
+
+def say_hello_to_user():
+    print "please write your name"
+    name = raw_input()
+    print "hello,%s" % name
+
+
+# List
+a = ["a", "b", 0, "c"]
+b = ["e",1]
+
+# Dict
+mydict = {"name":"juyue","age":18}
+
+def print_list_append(a, b):
+    print a
+    print "len of list : %d"%len(a)
+    a.append(b)
+    print a
+    print "len of list : %d"%len(a)
+
+def print_list_extend(a,b):
+    a.extend(b)
+    print a
+
+
+if __name__ == "__main__":
+    #    say_hello_to_user()
+#string
+    add_function(2, 3)
+    add_function("hello ", "world")
+    add_function("hello ", `1`)
+    add_function("hello ", repr(2))
+    add_function("hello ", str(3))
+    print_strings("juyue")
+    print_cutout_str("I'm at zoo coffee", 4, 6)
+#list
+    print_list_append(a, "d")
+    print_list_extend(a, b)
+    print(range(9))
+    print(mydict)
